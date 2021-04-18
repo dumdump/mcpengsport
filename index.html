@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!--This is actually made by peng not copy pasted from sketchy russian website-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>McPeng's Game</title>
+    <style media="screen">
+      body {
+        overflow: hidden;
+      }
+      .main-frame{
+      }
+      .main-header{
+        margin-bottom: 100px;
+      }
+      .main-header-title-box{
+        text-align:center;
+      }
+      .main-body{
+        text-align: center
+      }
+      .game-frame{
+        height: 500px;
+      }
+      .control-button {
+        padding: 0px;
+        cursor: pointer;
+        border: 1px solid black;
+        padding: 25px;
+        align-content: center;
+        border-radius: 5px;
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+      .control-button:hover {
+        background-color: grey;
+      }
+      .arrow-button-img {
+        height: 40px;
+        width: 40px;
+      }
+      .game-controls {
+        height: 50px;
+      }
+      .main-footer{}
+      .main-footer-title-box{
+        text-align:center;
+      }
+      #game {
+        border: 1px solid black;
+      }
+    </style>
+    <script src="script.js"></script>
+  </head>
+  <body onload="draw();">
+    <div class="main-frame">
+      <div class="main-header">
+        <div class="main-header-title-box">
+          <h1 class="main-header-title">McPeng's Game</h1>
+        </div>
+      </div>
+      <div class="main-body">
+        <div class="game-frame" id="game-frame">
+          <canvas id="game" width="1000" height="300"></canvas>
+          <div class="game-controls">
+            <a class="control-button" id="help-button" onclick="help()">Help</a>
+
+            <a class="control-button" id="e-button">E</a>
+
+            <a class="control-button" id="q-button" onclick="qKeyPressed()">Q</a>
+
+            <a class="control-button" id="left-button" onclick="leftKeyPressed();">
+              <img class="arrow-button-img" src="leftarrow.jpg"></img>
+            </a>
+
+            <a class="control-button" id="up-button" onclick="upKeyPressed();">
+              <img class="arrow-button-img" src="uparrow.jpg"></img>
+            </a>
+
+            <a class="control-button" id="down-button" onclick="downKeyPressed();">
+              <img class="arrow-button-img" src="downarrow.jpg"></img>
+            </a>
+
+            <a class="control-button" id="right-button" onclick="rightKeyPressed();">
+              <img class="arrow-button-img" src="rightarrow.jpg"></img>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="main-footer">
+        <div class="main-footer-title-box">
+          <h2 class="main-header-title">Coded by Peng, Idea by Mac</h2>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
