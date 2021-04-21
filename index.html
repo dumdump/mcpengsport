@@ -1,28 +1,108 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
+<!--This is actually made by peng not copy pasted from sketchy russian website-->
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Help for McPeng's Game</title>
+    <title>McPeng's Game</title>
+    <style media="screen">
+      body {
+        overflow: hidden;
+      }
+      .main-frame{
+      }
+      .main-header{
+        margin-bottom: 100px;
+      }
+      .main-header-title-box{
+        text-align:center;
+      }
+      .main-body{
+        text-align: center
+      }
+      .game-frame{
+        height: 700px;
+      }
+      .control-button {
+        padding: 0px;
+        cursor: pointer;
+        border: 1px solid black;
+        padding: 25px;
+        align-content: center;
+        border-radius: 5px;
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+      .control-button:hover {
+        background-color: grey;
+      }
+      .arrow-button-img {
+        height: 40px;
+        width: 40px;
+      }
+      .game-controls {
+        height: 50px;
+      }
+      .main-footer{}
+      .main-footer-title-box{
+        text-align:center;
+      }
+      #game {
+        border: 1px solid black;
+      }
+    </style>
   </head>
-  <body>
-    <!--imagine needing help-->
-   <h1>Help Page</h1>
-   <div class="main-body">
-     <h2>Objectives</h2>
-     <p>The objective is to stay alive as long as possible. Zombies will try to take down McPeng Sports, but you will have to protect it.</p>
-     <br>
-     <h2>Controls</h2>
-     <p>'WASD' for movement, 'E' for shooting, 'Q' for 'IN DEVELOPMENT'. You can use your keyboard or the buttons on the screen. (unless peng is dumb and forgot to make them.) ARROW KEYS DONT WORK. </p>
-     <br>
-     <h2>Other Info</h2>
-     <p>If a zombie hits McPeng Sports, it will inflict between 0 - 25 damage. Eliminating 10 zombies will result in a level up. Levels increase zombie speed. Only one zombie spawns at a time (for now).</p>
-     <br>
-     <h2>Notes</h2>
-     <p>theres probably lots of glitches ill try to fix them.</p>
-     <p>stuff ill try to fix: no mcpeng sports damage on level 4; character glitches out if zombie goes over it; it looks awful; the controls are bad;</p>
-     <br>
-     <p>sry if this looks bad i was too lazy to format it.</p>
-   </div>
+  <body onload="draw();">
+    <div class="main-frame">
+      <div class="main-header">
+        <div class="main-header-title-box">
+          <h1 class="main-header-title">McPeng's Game</h1>
+        </div>
+      </div>
+      <div class="main-body">
+        <div class="game-frame" id="game-frame">
+          <canvas id="game" width="1000" height="300"></canvas>
+          <div class="game-controls">
+            <a href="help/index.html" class="control-button" id="help-button" onclick="help()">Help</a>
+
+            <a class="control-button" id="e-button">E</a>
+
+            <a class="control-button" id="q-button" onclick="qKeyPressed()">Q</a>
+
+            <a class="control-button" id="left-button" onclick="leftKeyPressed();">
+              <img class="arrow-button-img" src="leftarrow.jpg"></img>
+            </a>
+
+            <a class="control-button" id="up-button" onclick="upKeyPressed();">
+              <img class="arrow-button-img" src="uparrow.jpg"></img>
+            </a>
+
+            <a class="control-button" id="down-button" onclick="downKeyPressed();">
+              <img class="arrow-button-img" src="downarrow.jpg"></img>
+            </a>
+
+            <a class="control-button" id="right-button" onclick="rightKeyPressed();">
+              <img class="arrow-button-img" src="rightarrow.jpg"></img>
+            </a>
+          </div>
+          <div class="game-info">
+            <div class="base-health">
+              <p id="base-health"></p>
+            </div>
+            <div class="timer-score">
+              <p id="timer-score"></p>
+            </div>
+            <div class="level">
+              <p id="level"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main-footer">
+        <div class="main-footer-title-box">
+          <h2 class="main-header-title">Coded by Peng, Idea by Mac</h2>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
   </body>
 </html>
