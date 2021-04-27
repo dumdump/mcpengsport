@@ -123,6 +123,7 @@ function testZombieCollision() {
   if (bulletPosY > zombiePosY && bulletPosY < zombieCoordsYMax && characterPosX < zombiePosX && shooting == true) {
     zombieHit = true;
     zombieScore++;
+    timerScoreEl.innerHTML = "Score: " + zombieSore;
   }
 }
 
@@ -215,7 +216,6 @@ function buttonEPressed() {
 function startGameTimer() {
   setInterval(function() {
     timerScore += 1;
-    timerScoreEl.innerHTML = "Time Alive: " + timerScore;
     console.log(timerScore);
   }, 1000)
 }
