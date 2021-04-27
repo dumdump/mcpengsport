@@ -124,7 +124,7 @@ function testZombieCollision() {
   if (bulletPosY > zombiePosY && bulletPosY < zombieCoordsYMax && characterPosX < zombiePosX && shooting == true) {
     zombieHit = true;
     zombieCount++;
-    timerScoreEl.innerHTML = "Score: " + zombieCount;
+    timerScoreEl.innerHTML = "Zombies Slayed: " + zombieCount;
   }
 }
 
