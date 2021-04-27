@@ -109,6 +109,7 @@ function zombieLoop() {
     difficulty++;
     zombieScore = 0;
     difficultyEl.innerHTML = "Level: " + difficulty;
+    healAvailable = true;
   }
   if (baseHealth <= 0) {
     alert("McPeng Sports has fallen... " + "Time Alive: " + timerScore);
