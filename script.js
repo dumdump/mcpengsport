@@ -125,7 +125,7 @@ function testZombieCollision() {
     zombieHit = true;
     zombieCount++;
     zombieScore++;
-    timerScoreEl.innerHTML = "Zombies Slayed: " + zombieScore;
+    timerScoreEl.innerHTML = "Zombies Slayed: " + zombieCount;
   }
 }
 
