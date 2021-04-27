@@ -108,7 +108,7 @@ function zombieLoop() {
   if (zombieScore == 10) {
     difficulty++;
     zombieScore = 0;
-    difficultyEl.innerHTML = "Level: " + difficulty;
+    timerScoreEl.innerHTML = "Level: " + difficulty;
     healAvailable = true;
   }
   if (baseHealth <= 0) {
