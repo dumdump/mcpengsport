@@ -33,6 +33,7 @@ var zombieHit = false;
 var zombieIsShot = false;
 var zombieHitStructure = false;
 var zombieScore = 0;
+var zombieCount = 0;
 
 const pause = time => new Promise(resolve => setTimeout(resolve, time))
 
@@ -108,7 +109,8 @@ function zombieLoop() {
   if (zombieScore == 10) {
     difficulty++;
     zombieScore = 0;
-    timerScoreEl.innerHTML = "Level: " + difficulty;
+    difficultyEl.innerHTML = "Level: " + difficulty;
+    timerScoreEl.innerHTML = "Score: " + zombieScore
     healAvailable = true;
   }
   if (baseHealth <= 0) {
