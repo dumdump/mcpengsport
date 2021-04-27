@@ -182,7 +182,7 @@ async function eKeyPressed() {
   shooting = false;
 }
 
-async function qKeyPressed() {
+function qKeyPressed() {
   if (healAvailable == true) {
     baseHealth += RandomNumber(20);
     healAvailable = false;
