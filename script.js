@@ -11,6 +11,7 @@ var difficulty = 1;
 var baseHealthEl = document.getElementById('base-health');
 var timerScoreEl = document.getElementById('timer-score');
 var difficultyEl = document.getElementById('level');
+var healAvailablEl = document.getElementById('heal-available');
 //chracter
 var speed = 10;
 var bulletSpeed = 10;
@@ -111,6 +112,7 @@ function zombieLoop() {
     zombieScore = 0;
     difficultyEl.innerHTML = "Level: " + difficulty;
     healAvailable = true;
+    healAvailableEl.innerHTML = "Heal Available: Yes"
   }
   if (baseHealth <= 0) {
     alert("McPeng Sports has fallen... " + "Time Alive: " + timerScore);
@@ -189,6 +191,7 @@ function qKeyPressed() {
   if (healAvailable == true) {
     baseHealth += RandomNumber(20);
     healAvailable = false;
+    healAvailableEl.innerHTML = "Heal Available: No";
   }
 }
 
