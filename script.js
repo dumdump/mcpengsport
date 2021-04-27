@@ -110,7 +110,6 @@ function zombieLoop() {
     difficulty++;
     zombieScore = 0;
     difficultyEl.innerHTML = "Level: " + difficulty;
-    timerScoreEl.innerHTML = "Score: " + zombieScore
     healAvailable = true;
   }
   if (baseHealth <= 0) {
@@ -124,8 +123,8 @@ function testZombieCollision() {
   var zombieCoordsYMax = zombiePosY + zombieDimensionH;
   if (bulletPosY > zombiePosY && bulletPosY < zombieCoordsYMax && characterPosX < zombiePosX && shooting == true) {
     zombieHit = true;
-    zombieScore++;
-    timerScoreEl.innerHTML = "Score: " + zombieSore;
+    zombieCount++;
+    timerScoreEl.innerHTML = "Score: " + zombieCount;
   }
 }
 
