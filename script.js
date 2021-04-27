@@ -22,6 +22,7 @@ var bulletPosX = 0;
 var bulletPosY = 0;
 var shotAvailable = true;
 var shooting = false;
+var healAvailable = false;
 //zombie
 var zombieSpeed;
 var zombieDimemsionW;
@@ -180,7 +181,11 @@ async function eKeyPressed() {
   shooting = false;
 }
 
-function qKeyPressed() {
+async function qKeyPressed() {
+  if (healAvailable == true) {
+    baseHealth += RandomNumber(20);
+    healAvailable = false;
+  }
 }
 
 function keyPressed(e) {
