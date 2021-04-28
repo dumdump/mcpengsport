@@ -231,3 +231,5 @@ buttonE.addEventListener('click', buttonEPressed);
 baseHealthEl.innerHTML = "McPeng Sports Health: 100%";
 difficultyEl.innerHTML = "Level: 1";
 healAvailableEl.innerHTML = "Heal Available: No";
+
+//https://docs.google.com/document/d/1Z1VGM0EAxYv3BYeWMJtmHVQW7GIyYAavMBmGGqe1WFg/edit
