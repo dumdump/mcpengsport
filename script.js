@@ -11,8 +11,8 @@ var difficulty = 1;
 var baseHealthEl = document.getElementById('base-health');
 var timerScoreEl = document.getElementById('timer-score');
 var difficultyEl = document.getElementById('level');
-var healAvailablEl = document.getElementById('heal-available');
-//chracter
+var healAvailableEl = document.getElementById('heal-available');
+//character
 var speed = 10;
 var bulletSpeed = 10;
 var characterPosX = 0;
