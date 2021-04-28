@@ -187,11 +187,14 @@ async function eKeyPressed() {
   shooting = false;
 }
 
-function qKeyPressed() {
+async function qKeyPressed() {
   if (healAvailable == true) {
     baseHealth += 10;
     healAvailable = false;
     healAvailableEl.innerHTML = "Heal Available: No";
+    baseHealthEl.innerHTML = "Healed!"
+    pause(500);
+    baseHealthEl.innerHTML = "McPeng Sports Health: " + baseHealth + "%";
   }
 }
 
