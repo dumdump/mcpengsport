@@ -189,7 +189,7 @@ async function eKeyPressed() {
 
 function qKeyPressed() {
   if (healAvailable == true) {
-    baseHealth += RandomNumber(20);
+    baseHealth += 10;
     healAvailable = false;
     healAvailableEl.innerHTML = "Heal Available: No";
   }
